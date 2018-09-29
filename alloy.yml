@@ -1,0 +1,16 @@
+name: default
+
+platform:
+  os: windows
+  arch: amd64
+
+steps:
+  - name: do-stuff
+    image: microsoft/nanoserver:1803
+    commands:
+    - dir c:\
+    - whoami
+  - name: and-then
+    image: microsoft/windowsservercore:1803
+    commands:
+      - dir env:\ | Out-String
