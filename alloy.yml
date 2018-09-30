@@ -14,3 +14,4 @@ steps:
     image: microsoft/windowsservercore:1803
     commands:
       - dir env:\ | Out-String
+      - whomai
